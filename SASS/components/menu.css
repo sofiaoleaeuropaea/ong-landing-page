@@ -1,0 +1,15 @@
+.menu {
+  gap: 1.25rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: var(--title-font);
+  flex-wrap: wrap;
+}
+.menu a {
+  color: var(--black-color);
+  text-decoration: none;
+  word-spacing: 0.1em;
+}
+.menu a:hover {
+  color: var(--primary-color);
+}

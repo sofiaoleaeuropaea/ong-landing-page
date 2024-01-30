@@ -1,0 +1,29 @@
+.btn {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 4px;
+  border: 2px solid var(--primary-color);
+  display: inline-block;
+  text-align: center;
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  font-family: var(--title-font);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.btn_heart {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .btn_heart {
+    display: flex;
+  }
+}
+.btn span {
+  padding-right: 0.75rem;
+}
+.btn:hover {
+  opacity: 0.7;
+}
