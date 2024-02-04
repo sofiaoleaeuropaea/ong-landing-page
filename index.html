@@ -10,46 +10,34 @@
 	<body>
 		<header class="site-header">
 			<div class="container">
-				<a href="#" class="site-header__logo"><img src="images/IHAlogo.png" alt="Homepage" /></a>
-				<nav class="site-header__nav">
-					<ul class="menu">
-						<li class="menu__items"><a href="#">Who we are</a></li>
-						<li class="menu__items"><a href="#">Find your Association</a></li>
-						<li class="menu__items"><a href="#">The Huntington´s Disease</a></li>
-						<li class="menu__items"><a href="#">How to help</a></li>
-						<li class="menu__items"><a href="#">Latest</a></li>
-					</ul>
-				</nav>
-				<nav class="site-header__nav-mobile">
-					<div class="hamburger">
-						<div class="bar1"></div>
-						<div class="bar2"></div>
-						<div class="bar3"></div>
-					</div>
-					<ul class="menu">
-						<li class="menu__items"><a href="#">Who we are</a></li>
-						<li class="menu__items"><a href="#">Find your Association</a></li>
-						<li class="menu__items"><a href="#">The Huntington´s Disease</a></li>
-						<li class="menu__items"><a href="#">How to help</a></li>
-						<li class="menu__items"><a href="#">Latest</a></li>
-					</ul>
-				</nav>
-				<!-- <div class="search">
+				<div class="site-header__wrapper">
+					<a href="#" class="site-header__logo"><img src="images/IHAlogo.png" alt="IHA logo" /></a>
+
+					<nav class="site-header__nav">
+						<ul class="site-header__menu">
+							<li><a href="#">Who we are</a></li>
+							<li class="menu__item-remove"><a href="#">Our Associations</a></li>
+							<li><a href="#">The Huntington´s Disease</a></li>
+							<li><a href="#">How to help</a></li>
+							<li><a href="#">Latest</a></li>
+							<li>
+								<!-- <div class="search">
 					<form method="post">
 						<input type="search" placeholder="Search Here" />
 					</form>
-				</div> -->
-				<!-- <a class="search-tool" href="/search">
-					<svg fill="#000000" width="25px" height="25px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-						<title />
+				</div> --><a class="search-tool" href="/search">
+									<svg fill="#000000" width="25px" height="25px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+										<title />
 
-						<g id="search">
-							<path d="M29.71,28.29l-6.5-6.5-.07,0a12,12,0,1,0-1.39,1.39s0,.05,0,.07l6.5,6.5a1,1,0,0,0,1.42,0A1,1,0,0,0,29.71,28.29ZM14,24A10,10,0,1,1,24,14,10,10,0,0,1,14,24Z" />
-						</g>
-					</svg>
-				</a> -->
-				<div class="site-header__calltoaction">
-					<a href="/donate.html" title="Donations" class="btn btn_heart"
+										<g id="search">
+											<path d="M29.71,28.29l-6.5-6.5-.07,0a12,12,0,1,0-1.39,1.39s0,.05,0,.07l6.5,6.5a1,1,0,0,0,1.42,0A1,1,0,0,0,29.71,28.29ZM14,24A10,10,0,1,1,24,14,10,10,0,0,1,14,24Z" />
+										</g>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<a href="#" title="Donations" class="btn btn_icon"
 						><span>Donate</span>
 						<svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path
@@ -58,10 +46,190 @@
 							/>
 						</svg>
 					</a>
+
+					<button class="site-header__hamburger">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
 				</div>
 			</div>
 		</header>
-		<main></main>
-		<script src="index.js"></script>
+		<main class="main">
+			<section class="hero-section">
+				<img src="images/HD.jpg" alt="Pacient with HD" id="hero-img_mobile" />
+				<img src="images/HD_responsive.jpg" alt="Pacient with HD" id="hero-img_desktop" />
+				<div class="container">
+					<div class="hero-section__content">
+						<div class="hero-section__content_left">
+							<h1>You can have an impact on the lives of those struggling with HD</h1>
+							<p>
+								At the heart of our mission lies the unwavering commitment to support individuals and families affected by Huntington’s Disease. Your impact can make a significant difference by
+								providing a means of support that will allow us to provide a go-to place for HD families everywhere and represent the global HD community interests.
+							</p>
+						</div>
+						<div class="hero-section__content_right">
+							<form action="get">
+								<div class="donation-inputfield">
+									<span>€</span>
+									<input type="number" id="donationAmount" name="donationAmount" required />
+								</div>
+								<a href="#" title="Donations" class="btn btn_donationForm"><span>Donate now</span> </a>
+							</form>
+						</div>
+					</div>
+				</div>
+				<section class="calltoaction-section">
+					<div class="container">
+						<h2 class="subheading">How you can help the HD community</h2>
+						<div class="calltoaction-section__wrapper">
+							<div class="calltoaction-card">
+								<img src="" alt="" />
+								<div class="calltoaction-card__content">
+									<h4>Volunteer in HA</h4>
+									<p>If you want to help the Huntington's Disease community, we are looking for people willing to join forces and create something together</p>
+									<a href="#" class="btn_simple"><span>Find more</span></a>
+								</div>
+							</div>
+							<div class="calltoaction-card">
+								<img src="" alt="" />
+								<div class="calltoaction-card__content">
+									<h4>Want to set up your local association?</h4>
+									<p>If you want to start your own association to support HD, we can help you understand how</p>
+									<a href="#" class="btn_simple"><span>Learn how</span></a>
+								</div>
+							</div>
+							<div class="calltoaction-card">
+								<img src="" alt="" />
+								<div class="calltoaction-card__content">
+									<h4>You can help us make a difference</h4>
+									<p>Your donation will help us supporting individuals and families that are affected by HD</p>
+									<a href="#" class="btn_simple"><span>Donate now</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="news-section">
+				<div class="container">
+					<h2>Latest news</h2>
+					<div class="news-section__highlights">
+						<img src="images/anniversary.jpg" alt="HDI team" />
+
+						<div class="news-section__highlights_content">
+							<h3>50 years of IHA!</h3>
+							<p>
+								For five decades, the International Huntington Association has been supporting the global HD community. We have been raising awareness, promoting drug trials, lobbying for services and
+								connecting people and organisations from all around the world. As we celebrate this remarkable milestone, we stand determined in our commitment to make a difference. Our
+								50th-anniversary celebration marks not only a milestone in our history but also the beginning of important new initiatives, projects aimed at furthering our impact, reaching ever more
+								people and bringing hope and comfort to all.
+							</p>
+							<a href="#" class="btn_simple"><span>See what we've been doing</span> </a>
+						</div>
+					</div>
+					<div class="news-section__wrapper">
+						<div class="news-card">
+							<img src="images/HD1.jpg" alt="Pacient with HD" />
+							<div class="news-card__content">
+								<h4>IHA is now member of the Rare Diseases International</h4>
+								<p>
+									This is the beggining of a so long waiting and a huge step for the International Huntington Association, as it means we are not only playing an important role in the HD community,
+									but also in the Rare Diseases community.
+								</p>
+								<a href="#" class="btn_simple"><span>Read the article</span></a>
+							</div>
+						</div>
+						<div class="news-card">
+							<img src="images/HD2.jpg" alt="Pacient with HD" />
+							<div class="news-card__content">
+								<h4>uniQure Announces Update on Phase I/II Clinical Trials of AMT-130 Gene Therapy</h4>
+								<p>
+									Patients treated with AMT-130 continue to show evidence of preserved neurological function with potential dose-dependent clinical benefits relative to an inclusion criteria-matched
+									natural history of the disease.
+								</p>
+								<a href="#" class="btn_simple"><span>Read the article</span></a>
+							</div>
+						</div>
+						<div class="news-card">
+							<img src="images/nancy_gasper.jpg" alt="Nancy Gasper, pacient with HD" />
+							<div class="news-card__content">
+								<h4>Stories: "Knowledge, Empathy, and Encouragement – EHA Conference Inspired Me"</h4>
+								<p>
+									Eighteen months post-diagnosis, she embarked on a journey to the European Huntington Conference in Belgium, where the days unfolded as an informative and overwhelming experience.
+								</p>
+								<a href="#" class="btn_simple"><span>Meet Nancy Gasper</span></a>
+							</div>
+						</div>
+						<div class="news-card">
+							<img src="images/ABH.jpg" alt="Volunteer of the ABH team" />
+							<div class="news-card__content">
+								<h4>Empowering Communities: A Recap of Recent Initiatives by the Brazilian Huntington Association</h4>
+								<p>The Brazilian Huntington Association (ABH) ihas been conducting numerous initiatives, within the HD community, dedicated to the prevention and treatment of Huntington’s Disease.</p>
+								<a href="#" class="btn_simple"><span>Read the article</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="sponsors-section container">
+				<a href="https://www.uniqure.com/"><img src="images/uniqure_logo.png" alt="Uniqure logo" class="sponsors-section_logo" /></a>
+				<a href="https://menararediseases.com/"><img src="images/mena_logo.png" alt="Mena Rare Diseases logo" class="sponsors-section_logo" /></a>
+				<a href="https://www.rarediseasesinternational.org/"><img src="images/RDI-LOGO.png" alt="Rare diseases international logo" class="sponsors-section_logo" /></a>
+			</section>
+		</main>
+		<footer class="site-footer">
+			<div class="container container-sections">
+				<div class="site-footer_search footer-subsections">
+					<ul class="menu_site-footer">
+						<li><a href="#">Who we are</a></li>
+						<li><a href="#">Our Associations</a></li>
+						<li><a href="#">The Huntington´s Disease</a></li>
+						<li><a href="#">How to help</a></li>
+						<li><a href="#">Latest</a></li>
+						<li><a href="#">Contacts</a></li>
+					</ul>
+				</div>
+				<div class="site-footer__calltoactions footer-subsections">
+					<p class="site-footer_heading">What you can do to help the HD community</p>
+					<div class="container-btn">
+						<a href="#" title="Donations" class="btn btn_icon btn_fixed"
+							><span>Donate</span>
+							<svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 5.50063L11.4596 6.02073C11.463 6.02421 11.4664 6.02765 11.4698 6.03106L12 5.50063ZM8.96173 18.9109L8.49742 19.4999L8.96173 18.9109ZM15.0383 18.9109L14.574 18.3219L15.0383 18.9109ZM7.00061 16.4209C6.68078 16.1577 6.20813 16.2036 5.94491 16.5234C5.68169 16.8432 5.72758 17.3159 6.04741 17.5791L7.00061 16.4209ZM2.34199 13.4115C2.54074 13.7749 2.99647 13.9084 3.35988 13.7096C3.7233 13.5108 3.85677 13.0551 3.65801 12.6917L2.34199 13.4115ZM13.4698 8.03034C13.7627 8.32318 14.2376 8.32309 14.5304 8.03014C14.8233 7.7372 14.8232 7.26232 14.5302 6.96948L13.4698 8.03034ZM2.75 9.1371C2.75 6.98623 3.96537 5.18252 5.62436 4.42419C7.23607 3.68748 9.40166 3.88258 11.4596 6.02073L12.5404 4.98053C10.0985 2.44352 7.26409 2.02539 5.00076 3.05996C2.78471 4.07292 1.25 6.42503 1.25 9.1371H2.75ZM8.49742 19.4999C9.00965 19.9037 9.55955 20.3343 10.1168 20.6599C10.6739 20.9854 11.3096 21.25 12 21.25V19.75C11.6904 19.75 11.3261 19.6293 10.8736 19.3648C10.4213 19.1005 9.95208 18.7366 9.42605 18.3219L8.49742 19.4999ZM15.5026 19.4999C16.9292 18.3752 18.7528 17.0866 20.1833 15.4758C21.6395 13.8361 22.75 11.8026 22.75 9.1371H21.25C21.25 11.3345 20.3508 13.0282 19.0617 14.4798C17.7469 15.9603 16.0896 17.1271 14.574 18.3219L15.5026 19.4999ZM22.75 9.1371C22.75 6.42503 21.2153 4.07292 18.9992 3.05996C16.7359 2.02539 13.9015 2.44352 11.4596 4.98053L12.5404 6.02073C14.5983 3.88258 16.7639 3.68748 18.3756 4.42419C20.0346 5.18252 21.25 6.98623 21.25 9.1371H22.75ZM14.574 18.3219C14.0479 18.7366 13.5787 19.1005 13.1264 19.3648C12.6739 19.6293 12.3096 19.75 12 19.75V21.25C12.6904 21.25 13.3261 20.9854 13.8832 20.6599C14.4405 20.3343 14.9903 19.9037 15.5026 19.4999L14.574 18.3219ZM9.42605 18.3219C8.63014 17.6945 7.82129 17.0963 7.00061 16.4209L6.04741 17.5791C6.87768 18.2624 7.75472 18.9144 8.49742 19.4999L9.42605 18.3219ZM3.65801 12.6917C3.0968 11.6656 2.75 10.5033 2.75 9.1371H1.25C1.25 10.7746 1.66995 12.1827 2.34199 13.4115L3.65801 12.6917ZM11.4698 6.03106L13.4698 8.03034L14.5302 6.96948L12.5302 4.97021L11.4698 6.03106Z"
+									fill="#FFF"
+								/>
+							</svg>
+						</a>
+						<a href="#" title="Volunteer" class="btn btn_icon btn_fixed"
+							><span>Volunteer</span>
+							<img src="images/volunteer.svg" alt="volunteer" />
+						</a>
+					</div>
+				</div>
+				<div class="site-footer__social footer-subsections">
+					<div class="site-footer__social-newsletter">
+						<p class="site-footer_heading">Join our newsletter</p>
+						<p>Get the latest news about the HD community and how you can make a difference.</p>
+						<form action="get" class="newsletter_form">
+							<input type="email" name="email" id="newsletter-email" placeholder="Enter e-mail adress" required />
+							<input type="submit" value="Subscribe" class="btn btn_forms" />
+						</form>
+					</div>
+					<div class="site-footer__social-media">
+						<p class="site-footer_heading">Follow us</p>
+						<div class="social-media_icons">
+							<a href="https://www.instagram.com/internationalhuntington/"><img src="images/instagram.png" /></a>
+							<a href="https://www.facebook.com/internationalhuntington"><img src="images/facebook.png" /></a>
+							<a href="https://twitter.com/ihahuntington"><img src="images/twitter.png" /></a>
+							<a href="https://www.youtube.com/@internationalhuntingtonass859"><img src="images/youtube.png" /></a>
+							<a href="https://no.linkedin.com/company/internationalhuntington"><img src="images/linkedin.png" /></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="scripts/main.js"></script>
 	</body>
 </html>

@@ -1,0 +1,67 @@
+.hero-section {
+	
+	img {
+		width: 100%;
+	}
+	#hero-img_desktop {
+		display: none;
+	}
+	@media screen and (min-width: 768px) {
+		#hero-img_desktop {
+			display: block;
+		}
+		#hero-img_mobile {
+			display: none;
+		}
+	}
+
+	&__content {
+		@extend %content-layout;
+		max-width: 100%;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		margin-top: -13%;
+
+		@media screen and (max-width: 869px) {
+			gap: 2rem;
+		}
+		@media screen and (max-width: 500px) {
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		}
+
+		&_left {
+			p {
+				margin-top: 1.75rem;
+				max-width: 100%;
+			}
+		}
+		&_right {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			form {
+				max-width: 410px;
+				min-width: 310px;
+				padding: 2rem 1rem;
+				background-color: var(--secondary-color);
+
+				.donation-inputfield {
+					background-color: var(--white-color);
+					font-size: 1.75rem;
+					font-family: var(--title-font);
+					margin-bottom: 25px;
+					padding-left: 0.5rem;
+					input {
+						font-size: 1.25rem;
+						&[type='number']::-webkit-inner-spin-button,
+						&[type='number']::-webkit-outer-spin-button {
+							-webkit-appearance: none;
+							margin: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

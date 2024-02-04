@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: var(--text-font);
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+body {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	background-color: var(--background-color);
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--title-font);
+}
+
+main {
+	display: block !important;
+	margin-top: 117px;
+}
+
+input {
+	border: none;
+	outline: none;
+	font-family: var(--text-font);
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	line-height: var(--p-line-height);
+}

@@ -1,0 +1,16 @@
+.calltoaction-section {
+   margin-top: var(--margin-section);
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		justify-content: space-between;
+	}
+	.calltoaction-card {
+		max-width: 340px;
+		&__content {
+			@extend %content-layout-colored;
+		}
+	}
+}
