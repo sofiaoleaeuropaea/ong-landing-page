@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,500;0,700;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
 .menu_site-footer, .site-header__menu {
   padding: 0;
   margin: 0;
@@ -29,6 +30,8 @@
   color: var(--black-color);
   padding: 3rem;
   box-shadow: 0px 1px 10px rgba(41, 41, 41, 0.05);
+  position: relative;
+  margin-top: -5%;
 }
 
 .events-section__wrapper .event-card__content, .events-section__wrapper .event-card__teaser {
@@ -90,7 +93,7 @@ a {
 
 :root {
   --title-font: "Poppins", sans-serif;
-  --text-font: "PT Sans", sans-serif;
+  --text-font: "Roboto", sans-serif;
   --primary-color: #fc247c;
   --secondary-color: #04a354;
   --terciary-color: #61ce70;
@@ -103,6 +106,7 @@ a {
   --headingtext-size: 1.875rem;
   --margin-content-S: 0.75rem 0 1.75rem 0;
   --margin-content-M: 1.25rem 0 2.25rem 0;
+  --margin-content-L: 2rem 0 2.25rem 0;
   --margin-section: 5rem;
   --transition-effect: all 0.3s ease-in-out;
   --underline-transition-effect: border-bottom-width 0.1s ease;
@@ -237,6 +241,7 @@ a {
 }
 .btn__simple_secondary {
   border-bottom: 2px solid var(--secondary-color);
+  color: var(--white-color);
 }
 .btn__simple:hover {
   border-bottom-width: 4px;
@@ -261,20 +266,24 @@ a {
 }
 
 .main-heading {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
-.h3-heading {
-  font-size: 1.25rem;
-}
-
-.subheading {
+.main-subheading {
   margin-bottom: 2.75rem;
   font-size: 1.75rem;
 }
-.subheading span {
+.main-subheading span {
   color: var(--primary-color);
   font-size: 2rem;
+}
+
+.subheading {
+  font-size: 1.5rem;
+}
+
+.subheading_h4 {
+  font-size: 1.125rem;
 }
 
 .hero-paragraph {
@@ -429,6 +438,7 @@ p {
 .calltoaction-section .calltoaction-card__icon {
   max-height: 90px;
   width: auto;
+  z-index: 1;
 }
 .calltoaction-section .calltoaction-card__content {
   background-color: var(--background-color_secondary);
@@ -479,16 +489,32 @@ p {
   flex-direction: column;
 }
 .events-section__wrapper .event-card p {
-  margin: var(--margin-content-M);
+  margin: var(--margin-content-L);
 }
 @media screen and (min-width: 950px) {
   .events-section__wrapper .event-card {
     display: flex;
   }
 }
+.events-section__wrapper .event-card__teaser {
+  display: flex;
+  flex-direction: column;
+}
+.events-section__wrapper .event-card__teaser .event_img {
+  max-width: 350px;
+}
 .events-section__wrapper .event-card__content {
   background-color: var(--background-color_secondary);
   color: var(--white-color);
+}
+.events-section__wrapper .event-card__content .event-card__details {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  align-items: center;
+}
+.events-section__wrapper .event-card__content .event-location {
+  margin: 0.75rem 0;
 }
 .events-section__wrapper .event-card .event-date {
   display: flex;
@@ -497,12 +523,11 @@ p {
   font-family: var(--title-font);
 }
 .events-section__wrapper .event-card .event-date .date-separation {
-  width: 2rem;
+  width: 1.75rem;
   border-bottom: 2px solid var(--primary-color);
 }
-.events-section__wrapper .event-card img {
-  max-width: 350px;
-  min-width: 100px;
+.events-section__wrapper .event-card .event-date .day {
+  font-size: 1.25rem;
 }
 
 .site-footer {

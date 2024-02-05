@@ -8,18 +8,32 @@
 
 		.event-card {
 			p {
-				margin: var(--margin-content-M);
+				margin: var(--margin-content-L);
 			}
 			@media screen and (min-width: 950px) {
 				display: flex;
 			}
 			&__teaser {
 				@extend %content-layout-events;
+				display: flex;
+				flex-direction: column;
+				.event_img {
+					max-width: 350px;
+				}
 			}
 			&__content {
 				background-color: var(--background-color_secondary);
 				color: var(--white-color);
 				@extend %content-layout-events;
+				.event-card__details {
+					display: flex;
+					gap: 0.5rem;
+					font-size: 0.875rem;
+					align-items: center;
+				}
+				.event-location {
+					margin: 0.75rem 0;
+				}
 			}
 			.event-date {
 				display: flex;
@@ -28,14 +42,13 @@
 				font-family: var(--title-font);
 
 				.date-separation {
-					width: 2rem;
+					width: 1.75rem;
 					border-bottom: 2px solid var(--primary-color);
 				}
-			}
-			// a imagem nao esta a diminuir
-			img {
-				max-width: 350px;
-				min-width: 100px;
+
+				.day {
+					font-size: 1.25rem;
+				}
 			}
 		}
 	}

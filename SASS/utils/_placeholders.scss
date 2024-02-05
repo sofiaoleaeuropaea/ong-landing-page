@@ -24,14 +24,15 @@
 	margin-top: -10%;
 }
 
-%content-layout-uncolored {
+%content-layout-colored {
 	color: var(--black-color);
-
 	padding: 3rem;
 	box-shadow: 0px 1px 10px rgba(41, 41, 41, 0.05);
+	position: relative;
+	margin-top: -5%;
 }
 %content-layout-events {
 	background-color: var(--white-color);
 	padding: 2rem;
-		box-shadow: 0px 1px 10px rgba(41, 41, 41, 0.05);
+	box-shadow: 0px 1px 10px rgba(41, 41, 41, 0.05);
 }

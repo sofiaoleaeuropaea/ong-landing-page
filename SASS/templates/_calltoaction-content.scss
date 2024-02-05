@@ -4,10 +4,7 @@
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
-		// width: 100%;
-		// justify-content: space-between;
 		align-items: center;
-		// gap: 2rem;
 
 		@media screen and (min-width: 960px) {
 			flex-direction: row;
@@ -20,8 +17,6 @@
 		align-items: center;
 		min-width: 310px;
 		max-width: 380px;
-	
-
 
 		&:nth-child(2) {
 			margin: 2.25rem 0;
@@ -29,13 +24,14 @@
 
 		&__icon {
 			max-height: 90px;
-		width: auto;
+			width: auto;
+			z-index: 1;
 		}
 
 		&__content {
-			@extend %content-layout-uncolored;
-				background-color: var(--background-color_secondary);
-		color: var(--white-color);
+			@extend %content-layout-colored;
+			background-color: var(--background-color_secondary);
+			color: var(--white-color);
 			p {
 				margin: var(--margin-content-M);
 			}
