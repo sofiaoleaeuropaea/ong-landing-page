@@ -22,9 +22,7 @@
 				}
 			}
 			&__content {
-				background-color: var(--background-color_secondary);
-				color: var(--white-color);
-				@extend %content-layout-events;
+				@extend %content-layout-events-colored;
 				.event-card__details {
 					display: flex;
 					gap: 0.5rem;
