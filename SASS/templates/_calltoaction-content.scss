@@ -1,16 +1,44 @@
 .calltoaction-section {
-   margin-top: var(--margin-section);
+	margin-top: var(--margin-section);
 
 	&__wrapper {
 		display: flex;
-		flex-wrap: wrap;
-		width: 100%;
-		justify-content: space-between;
+		flex-direction: column;
+		// width: 100%;
+		// justify-content: space-between;
+		align-items: center;
+		// gap: 2rem;
+
+		@media screen and (min-width: 960px) {
+			flex-direction: row;
+			gap: 2rem;
+		}
 	}
 	.calltoaction-card {
-		max-width: 340px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-width: 310px;
+		max-width: 380px;
+	
+
+
+		&:nth-child(2) {
+			margin: 2.25rem 0;
+		}
+
+		&__icon {
+			max-height: 90px;
+		width: auto;
+		}
+
 		&__content {
-			@extend %content-layout-colored;
+			@extend %content-layout-uncolored;
+				background-color: var(--background-color_secondary);
+		color: var(--white-color);
+			p {
+				margin: var(--margin-content-M);
+			}
 		}
 	}
 }

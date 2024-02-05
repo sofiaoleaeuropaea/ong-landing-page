@@ -5,14 +5,13 @@
 }
 
 %sponsorslogo {
-	max-height: 60px;
+	max-height: 50px;
 	width: auto;
 }
 
 %medialogo-Small {
 	max-height: 25px;
 	width: auto;
-
 }
 
 %content-layout {
@@ -25,10 +24,14 @@
 	margin-top: -10%;
 }
 
-%content-layout-colored {
-	// background-color: #747373;
-	// border: 2px solid var(--primary-color);
+%content-layout-uncolored {
 	color: var(--black-color);
+
 	padding: 3rem;
 	box-shadow: 0px 1px 10px rgba(41, 41, 41, 0.05);
+}
+%content-layout-events {
+	background-color: var(--white-color);
+	padding: 2rem;
+		box-shadow: 0px 1px 10px rgba(41, 41, 41, 0.05);
 }

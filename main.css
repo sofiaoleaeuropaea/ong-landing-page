@@ -6,7 +6,7 @@
 }
 
 .sponsors-section a .sponsors-section_logo {
-  max-height: 60px;
+  max-height: 50px;
   width: auto;
 }
 
@@ -28,6 +28,12 @@
 .calltoaction-section .calltoaction-card__content {
   color: var(--black-color);
   padding: 3rem;
+  box-shadow: 0px 1px 10px rgba(41, 41, 41, 0.05);
+}
+
+.events-section__wrapper .event-card__content, .events-section__wrapper .event-card__teaser {
+  background-color: var(--white-color);
+  padding: 2rem;
   box-shadow: 0px 1px 10px rgba(41, 41, 41, 0.05);
 }
 
@@ -82,10 +88,6 @@ a {
   text-decoration: none;
 }
 
-p {
-  line-height: var(--p-line-height);
-}
-
 :root {
   --title-font: "Poppins", sans-serif;
   --text-font: "PT Sans", sans-serif;
@@ -93,12 +95,12 @@ p {
   --secondary-color: #04a354;
   --terciary-color: #61ce70;
   --background-color: #f6f6f6;
+  --background-color_secondary: #555555;
   --dark-background-color: #33373d;
   --white-color: #fff;
   --black-color: #000;
   --bodytext-size: 1rem;
   --headingtext-size: 1.875rem;
-  --p-line-height: 1.5rem;
   --margin-content-S: 0.75rem 0 1.75rem 0;
   --margin-content-M: 1.25rem 0 2.25rem 0;
   --margin-section: 5rem;
@@ -197,7 +199,7 @@ p {
   transition: var(--transition-effect);
 }
 @media screen and (max-width: 960px) {
-  .btn {
+  .btn_nav {
     margin: 0 2rem 0 auto;
   }
 }
@@ -226,14 +228,17 @@ p {
 .btn_donationForm:hover {
   color: var(--primary-color);
 }
-.btn_simple {
+.btn__simple {
   font-family: var(--title-font);
   font-size: var(--bodytext-size);
   color: var(--black-color);
   border-bottom: 2px solid var(--primary-color);
   transition: var(--underline-transition-effect);
 }
-.btn_simple:hover {
+.btn__simple_secondary {
+  border-bottom: 2px solid var(--secondary-color);
+}
+.btn__simple:hover {
   border-bottom-width: 4px;
 }
 .btn_forms {
@@ -255,6 +260,31 @@ p {
   gap: 10px;
 }
 
+.main-heading {
+  font-size: 1.5rem;
+}
+
+.h3-heading {
+  font-size: 1.25rem;
+}
+
+.subheading {
+  margin-bottom: 2.75rem;
+  font-size: 1.75rem;
+}
+.subheading span {
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+.hero-paragraph {
+  line-height: 1.75rem;
+}
+
+p {
+  line-height: 1.5rem;
+}
+
 .site-header {
   position: fixed;
   width: 100%;
@@ -263,7 +293,7 @@ p {
   padding: 1rem 0;
   background: var(--white-color);
   z-index: 9999;
-  transition: all 0.2s ease-in-out;
+  transition: var(--transition-effect);
   box-shadow: 0px 1px 10px rgba(41, 41, 41, 0.2);
 }
 .site-header__wrapper {
@@ -296,7 +326,7 @@ p {
   display: block;
   width: 30px;
   height: 3px;
-  margin: 5px auto;
+  margin: 0.375rem auto;
   background: var(--black-color);
 }
 @media screen and (max-width: 960px) {
@@ -377,13 +407,37 @@ p {
 }
 .calltoaction-section__wrapper {
   display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 960px) {
+  .calltoaction-section__wrapper {
+    flex-direction: row;
+    gap: 2rem;
+  }
 }
 .calltoaction-section .calltoaction-card {
-  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 310px;
+  max-width: 380px;
 }
+.calltoaction-section .calltoaction-card:nth-child(2) {
+  margin: 2.25rem 0;
+}
+.calltoaction-section .calltoaction-card__icon {
+  max-height: 90px;
+  width: auto;
+}
+.calltoaction-section .calltoaction-card__content {
+  background-color: var(--background-color_secondary);
+  color: var(--white-color);
+}
+.calltoaction-section .calltoaction-card__content p {
+  margin: var(--margin-content-M);
+}
+
 .news-section {
   margin-top: var(--margin-section);
   margin-bottom: var(--margin-section);
@@ -416,6 +470,41 @@ p {
   margin: var(--margin-content-S);
 }
 
+.events-section {
+  margin-bottom: var(--margin-section);
+}
+.events-section__wrapper {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+.events-section__wrapper .event-card p {
+  margin: var(--margin-content-M);
+}
+@media screen and (min-width: 950px) {
+  .events-section__wrapper .event-card {
+    display: flex;
+  }
+}
+.events-section__wrapper .event-card__content {
+  background-color: var(--background-color_secondary);
+  color: var(--white-color);
+}
+.events-section__wrapper .event-card .event-date {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  font-family: var(--title-font);
+}
+.events-section__wrapper .event-card .event-date .date-separation {
+  width: 2rem;
+  border-bottom: 2px solid var(--primary-color);
+}
+.events-section__wrapper .event-card img {
+  max-width: 350px;
+  min-width: 100px;
+}
+
 .site-footer {
   background-color: var(--dark-background-color);
 }
@@ -423,13 +512,13 @@ p {
   margin-bottom: 1.5rem;
 }
 .site-footer .container-sections {
-  padding: 1.25rem 2rem;
+  padding: 3rem 2rem 0.5rem 2rem;
   color: var(--white-color);
 }
 @media screen and (min-width: 639px) {
   .site-footer .container-sections {
     display: grid;
-    gap: 20px;
+    gap: 1.25rem;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
@@ -439,6 +528,9 @@ p {
     display: flex;
   }
 }
+.site-footer .footer-subsections {
+  margin-bottom: 2.5rem;
+}
 @media screen and (min-width: 961px) {
   .site-footer .footer-subsections {
     min-width: 310px;
@@ -447,6 +539,10 @@ p {
 .site-footer .menu_site-footer a {
   color: var(--white-color);
   font-size: 1.125rem;
+  transition: var(--transition-effect);
+}
+.site-footer .menu_site-footer a:hover {
+  color: var(--primary-color);
 }
 .site-footer_heading {
   font-size: 1.125rem;
@@ -460,7 +556,7 @@ p {
     grid-column: 1/3;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 1.25rem;
   }
 }
 @media screen and (min-width: 961px) {
@@ -481,10 +577,14 @@ p {
 }
 .site-footer .social-media_icons {
   display: flex;
-  gap: 30px;
+  gap: 2rem;
 }
 .site-footer .social-media_icons img {
   filter: invert(100%);
+  transition: var(--transition-effect);
+}
+.site-footer .social-media_icons img:hover {
+  filter: invert(0%);
 }
 .site-footer__calltoactions {
   display: flex;

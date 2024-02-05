@@ -1,0 +1,42 @@
+.events-section {
+	margin-bottom: var(--margin-section);
+
+	&__wrapper {
+		display: flex;
+		gap: 2rem;
+		flex-direction: column;
+
+		.event-card {
+			p {
+				margin: var(--margin-content-M);
+			}
+			@media screen and (min-width: 950px) {
+				display: flex;
+			}
+			&__teaser {
+				@extend %content-layout-events;
+			}
+			&__content {
+				background-color: var(--background-color_secondary);
+				color: var(--white-color);
+				@extend %content-layout-events;
+			}
+			.event-date {
+				display: flex;
+				flex-direction: column;
+				font-weight: 700;
+				font-family: var(--title-font);
+
+				.date-separation {
+					width: 2rem;
+					border-bottom: 2px solid var(--primary-color);
+				}
+			}
+			// a imagem nao esta a diminuir
+			img {
+				max-width: 350px;
+				min-width: 100px;
+			}
+		}
+	}
+}
